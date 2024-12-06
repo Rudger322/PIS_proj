@@ -26,6 +26,11 @@ namespace WinFormsApp1
             {
                 roadmap.AddRange(rule.Apply(user));
             }
+            
+            if (roadmap.Count == 1)
+            {
+                roadmap.Add(new MapPoint("Вам не нужно предпринимать никаких действий!"));
+            }
 
             return roadmap;
         }
